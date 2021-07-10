@@ -8,16 +8,22 @@
 html {
     font-size: 62.5%;
     font-family: 'Cabin', sans-serif;
+    font-weight: 400;
 }
 
 /* Header */
-.header__conatiner {
+.header__container {
     min-height: 100vh;
     width: 100vw;
     background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('../img/background.jpg') center center/cover no-repeat;
-    background-attachment: fixed;
     position: relative;
     overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0 96%);
+}
+
+.header__container.secondary {
+    min-height: 40rem;
+    clip-path: none;
 }
 
 /* Main Navbar */
@@ -30,8 +36,9 @@ html {
 
 .main-nav__title h1 {
     color: #c59d5f;
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-family: 'Herr Von Muellerhoff';
+    font-weight: 400;
 }
 
 .main-nav__nav-items {
@@ -66,6 +73,7 @@ html {
     text-align: center;
     font-family: 'Herr Von Muellerhoff';
     font-size: 3.5rem;
+    font-weight: 400;
 }
 
 .mobile-nav__nav-items {
@@ -172,7 +180,7 @@ html {
     padding: 1rem 2rem;
     background-color: #cccccc;
     color: #000000;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border: none;
     border-radius: .5rem;
     transition: ease .3s;
@@ -184,11 +192,239 @@ html {
     transition: ease .3s;
 }
 
+/* Landing Page Content */
+.landing-content__section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 3rem 1.5rem;
+}
+
+.information__heading {
+    font-family: 'Herr Von Muellerhoff';
+    color: #c59d5f;
+    font-size: 10rem;
+    font-weight: 300;
+}
+
+.information__subheading {
+    font-size: 4rem;
+    margin-top: -4.5rem;
+    letter-spacing: .5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.information__icon {
+    color: #515151;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.information__text {
+    color: #515151;
+    font-size: 1.75rem;
+    line-height: 3.5rem;
+    padding: 0 1rem;
+}
+
+.section__image {
+    width: 95%;
+    height: 300px;
+    background: url('../img/landing_img_1.jpg') center center/cover no-repeat;
+    margin: 2rem auto;
+}
+
+.section__image.image-3 {
+    background: url('../img/landing_img_3.jpg') center center/cover no-repeat;
+}
+
+.information__link {
+    display: inline-block;
+    text-decoration: none;
+    color: #c59d5f;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-bottom: 3px solid #c59d5f;
+    margin-top: 3rem;
+    padding-bottom: .3rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+/* Landing Page Divider */
+.section__divider {
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url(../img/landing_img_2.jpg) center center/cover no-repeat;
+    min-height: 50rem;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 87%);
+}
+
+.divider-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.divider-content__heading {
+    color: #c59d5f;
+    font-family: 'Herr Von Muellerhoff';
+    font-size: 10rem;
+    font-weight: 400;
+}
+
+.divider-content__subheading {
+    color: #cccccc;
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin-top: -4rem;
+    letter-spacing: .5rem;
+}
+
+/* Landing Page About Section */
+
+.landing-content__about {
+    background-color: #121212;
+    color: #cccccc;
+    padding: 4rem;
+    text-align: center;
+}
+
+.about__title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.about__seperator {
+    color: #c59d5f;
+    font-size: 3.5rem;
+    margin: 3rem 0;
+}
+
+.about__content {
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}
+
+.about__social__title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 4rem;
+}
+
+.about__social__links i {
+    font-size: 2rem;
+    margin: 0 2rem;
+    cursor: pointer;
+}
+
+/* Menu Page About Section */
+.menu-about {
+    padding: 2rem;
+}
+
+.menu-about__content {
+    color: #515151;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin: 2rem 0;
+}
+
+/* Menu Page Dividers */
+.menu-divider {
+    min-height: 30rem;
+    position: relative;
+}
+
+.menu-divider.breakfast {
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url(../img/landing_img_4.jpg) center center/cover no-repeat;
+}
+
+.menu-divider.lunch {
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url(../img/landing_img_5.jpg) center center/cover no-repeat;
+}
+
+.menu-divider.dinner {
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url(../img/landing_img_6.jpg) center center/cover no-repeat;
+}
+
+.menu-divider__heading {
+    color: #cccccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 4rem;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+}
+
+/* Food Menu */
+.food-menu {
+    padding: 2rem;
+}
+
+.menu-items__item {
+    color: #252525;
+    margin: 3rem 0;
+}
+
+.item__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.item-title {
+    font-size: 1.75rem;
+    letter-spacing: .2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.item-price {
+    font-size: 1.75rem;
+}
+
+.item__description {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #252525;
+    text-align: center;
+    padding: 5rem;
+}
+
+.footer-content {
+    color: #A1A1A1;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+}
+
+.footer-content span {
+    color: #c59d5f;
+}
+
 /* Media Queries */
 @media(min-width: 740px) {
     /* Header Container */
-    .header__conatiner {
-        border: 15px solid white;
+    .header__container {
+        border: 1.5rem solid white;
+        background-attachment: fixed;
     }
 
     /* Main Navbar */
@@ -197,7 +433,7 @@ html {
     }
 
     .main-nav__title h1 {
-        font-size: 6rem;
+        font-size: 5rem;
     }
 
     .main-nav__nav-items {
@@ -206,7 +442,7 @@ html {
     }
 
     .main-nav__nav-items li {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
         margin: 0 2rem;
     }
 
@@ -228,16 +464,16 @@ html {
 
     /* Header-Content */
     .tagline__heading {
-        font-size: 15rem;
+        font-size: 13rem;
         margin-bottom: -6rem;
     }
 
     .tagline__subheading {
-        font-size: 8rem;
+        font-size: 6rem;
     }
 
     .tagline__seperator {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     .tagline__seperator:before, 
@@ -246,6 +482,106 @@ html {
     }
 
     .tagline__slogan {
+        font-size: 2.5rem;
+    }
+
+    /* Landing Page Content */
+    .landing-content__section {
+        flex-direction: row;
+        padding: 2rem 5rem;
+    }
+
+    .information__heading {
+        font-size: 12rem;
+    }
+
+    .information__subheading {
         font-size: 3rem;
+        margin-top: -5rem;
+    }
+
+    .information__text {
+        font-size: 1.75rem;
+    }
+
+    .section__information {
+        max-width: 50%;
+        margin-right: 5rem;
+    }
+
+    .section__information.information-right {
+        margin-right: 0;
+        margin-left: 5rem;
+    }
+
+    .section__image {
+        max-width: 50%;
+        height: 40rem;
+    }
+
+    .information__link {
+        font-size: 1.5rem;
+    }
+    
+    /* Landing Page Divider */
+    .section__divider  {
+        background-attachment: fixed;
+        margin: 0 1.5rem;
+    }
+
+    .divider-content__heading {
+        font-size: 11rem;
+    }
+
+    .divider-content__subheading {
+        font-size: 4.5rem;
+        margin-top: -6rem;
+    }
+
+    /* Landing Page About Section */
+    .landing-content__about {
+        margin: 0 1.5rem;
+    }
+    
+    .about__content {
+        width: 50%;
+        margin: 3rem auto;
+    }
+
+    /* Menu Page About Section */
+    .menu-about {
+        display: flex;
+        margin-bottom: 5rem;
+    }
+
+    .menu-about__content {
+        flex: 1;
+        font-size: 1.5rem;
+        margin: 2rem;
+    }
+
+    /* Menu Page Dividers */
+    .menu-divider {
+        margin: 1rem 1.5rem;
+        background-attachment: fixed !important;
+    }
+
+    /* Food Menu */
+    .food-menu {
+        margin: 2rem;
+    }
+
+    .food-menu__menu-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-items__item {
+        margin: 1.5rem 2rem;
+    }
+
+    /* Footer */
+    .main-footer {
+        margin: 0 1.5rem 1rem 1.5rem;
     }
 }
