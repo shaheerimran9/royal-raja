@@ -1,0 +1,251 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Cabin', sans-serif;
+}
+
+/* Header */
+.header__conatiner {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('../img/background.jpg') center center/cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main Navbar */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 3.5rem;
+}
+
+.main-nav__title h1 {
+    color: #c59d5f;
+    font-size: 4.5rem;
+    font-family: 'Herr Von Muellerhoff';
+}
+
+.main-nav__nav-items {
+    display: none;
+}
+
+.main-nav__mobile-toggle {
+    display: block;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 3rem;
+    border: 1px solid white;
+    border-radius: .2rem;
+    padding: 1rem;
+}
+
+/* Mobile Navbar */
+.mobile-nav {
+    position: absolute;
+    top: 0;
+    background: #252525;
+    height: 100%;
+    width: 70%;
+    padding: 3rem 5rem;
+    transform: translateX(-400%);
+    transition: transform ease-in-out .3s;
+    z-index: 1;
+}
+
+.mobile-nav__title {
+    color: #c59d5f;
+    text-align: center;
+    font-family: 'Herr Von Muellerhoff';
+    font-size: 3.5rem;
+}
+
+.mobile-nav__nav-items {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.mobile-nav__nav-items li {
+    margin: 2rem 0;
+    font-size: 2.5rem;
+}
+
+
+.mobile-nav__nav-items li a {
+    color: #cccccc;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: ease .3s;
+}
+
+.mobile-nav__nav-items li a:hover {
+    color: #c59d5f;
+    transition: ease .3s;
+}
+
+.visible {
+    display: block;
+    transform: translateX(0);
+    transition: transform ease .3s;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #454545;
+    margin: 1.5rem 0;
+}
+
+/* Header - Content */
+.header__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header__content__tagline {
+    width: 100vw;
+    color: #cccccc;
+    text-align: center;
+}
+
+.tagline__heading {
+    font-family: 'Herr Von Muellerhoff';
+    font-size: 8rem;
+    color: #c59d5f;
+    margin-bottom: -3rem;
+}
+
+.tagline__subheading {
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+.tagline__seperator {
+    color: #c59d5f;
+    font-size: 3.5rem;
+}
+
+.tagline__seperator:before, 
+.tagline__seperator:after {
+    background-color: #cccccc;
+    content: "";
+    display: inline-block;
+    height: .1rem;
+    position: relative;
+    vertical-align: middle;
+    width: 12rem;
+}
+
+.tagline__seperator:before {
+    right: 0.5rem;
+    margin-left: -50%;
+    margin-top: -2rem;
+}
+
+.tagline__seperator:after {
+    left: 0.5rem;
+    margin-right: -50%;
+    margin-top: -2rem;
+}
+
+.tagline__slogan {
+    font-size: 2rem;
+    margin-top: -1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.tagline__btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    background-color: #cccccc;
+    color: #000000;
+    font-size: 2rem;
+    border: none;
+    border-radius: .5rem;
+    transition: ease .3s;
+}
+
+.tagline__btn:hover {
+    color: white;
+    background-color: #c59d5f;
+    transition: ease .3s;
+}
+
+/* Media Queries */
+@media(min-width: 740px) {
+    /* Header Container */
+    .header__conatiner {
+        border: 15px solid white;
+    }
+
+    /* Main Navbar */
+    .main-nav {
+        padding: 3rem 6rem;
+    }
+
+    .main-nav__title h1 {
+        font-size: 6rem;
+    }
+
+    .main-nav__nav-items {
+        display: flex;
+        list-style: none;
+    }
+
+    .main-nav__nav-items li {
+        font-size: 3.5rem;
+        margin: 0 2rem;
+    }
+
+    .main-nav__nav-items li a {
+        color: #cccccc;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: ease .3s;
+    }
+
+    .main-nav__nav-items li a:hover {
+        color: #c59d5f;
+        transition: ease .3s;
+    }
+
+    .main-nav__mobile-toggle {
+        display: none;
+    }
+
+    /* Header-Content */
+    .tagline__heading {
+        font-size: 15rem;
+        margin-bottom: -6rem;
+    }
+
+    .tagline__subheading {
+        font-size: 8rem;
+    }
+
+    .tagline__seperator {
+        font-size: 4rem;
+    }
+
+    .tagline__seperator:before, 
+    .tagline__seperator:after {
+        width: 18rem;
+    }
+
+    .tagline__slogan {
+        font-size: 3rem;
+    }
+}
